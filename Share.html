@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Share Ride - Destiny</title>
+    <link rel="stylesheet" href="/css/Share_style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo_text"><img src="/images/logo.png" alt="Destiny Logo" /></div>
+        </div>
+        <nav class="nav-links">
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+            <a href="#">BLOG</a>
+            <button class="book-btn">Book a Ride</button>
+        </nav>
+    </header>
+
+    <main class="share-container">
+        <div class="share-form-container">
+            <h2>Share Your Ride</h2>
+            <form class="share-form">
+                <div class="form-group">
+                    <label for="vehicle-type">Vehicle Type</label>
+                    <select id="vehicle-type" name="vehicle-type" required>
+                        <option value="">Select Vehicle Type</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Electric">Electric</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="vehicle-model">Vehicle Model</label>
+                    <input type="text" id="vehicle-model" name="vehicle-model" required placeholder="e.g., Toyota Camry">
+                </div>
+                <div class="form-group">
+                    <label for="seats">Available Seats</label>
+                    <input type="number" id="seats" name="seats" min="1" max="7" required>
+                </div>
+                <div class="form-group">
+                    <label for="price">Price per Seat (₹)</label>
+                    <input type="number" id="price" name="price" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="departure-time">Departure Time</label>
+                    <input type="datetime-local" id="departure-time" name="departure-time" required>
+                </div>
+                <div class="form-group">
+                    <label for="pickup">Pickup Location</label>
+                    <input type="text" id="pickup" name="pickup" required placeholder="Enter pickup location">
+                </div>
+                <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" name="destination" required placeholder="Enter destination">
+                </div>
+                <div class="form-group">
+                    <label for="additional-info">Additional Information</label>
+                    <textarea id="additional-info" name="additional-info" rows="3" placeholder="Any additional details about your ride"></textarea>
+                </div>
+                <button type="submit" class="share-btn">Share Ride</button>
+            </form>
+        </div>
+
+        <div class="active-rides">
+            <h2>Your Active Rides</h2>
+            <div class="rides-list">
+                <!-- Active rides will be added here -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <nav class="bottom-nav">
+            <a href="Home.html" class="nav-item">
+                <img src="https://img.icons8.com/ios-filled/50/taxi.png" alt="Home">
+                <span>Home</span>
+            </a>
+            <a href="Search.html" class="nav-item">
+                <img src="https://img.icons8.com/ios-filled/50/search--v1.png" alt="Search">
+                <span>Search</span>
+            </a>
+            <a href="Share.html" class="nav-item active">
+                <img src="https://img.icons8.com/ios-filled/50/add-user-group-man-man.png" alt="Share">
+                <span>Share</span>
+            </a>
+            <a href="Profile.html" class="nav-item">
+                <img src="https://img.icons8.com/ios-filled/50/user-male-circle.png" alt="Profile">
+                <span>Profile</span>
+            </a>
+        </nav>
+        <div class="container">
+            <p>&copy; 2025 Destiny. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/share.js"></script>
+</body>
+</html> 

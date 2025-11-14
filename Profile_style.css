@@ -1,0 +1,298 @@
+/* Inherit base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Profile Container Styles */
+.profile-container {
+    display: flex;
+    gap: 30px;
+    padding: 20px 5%;
+    min-height: calc(100vh - 200px);
+    background-color: #f5f5f5;
+}
+
+/* Sidebar Styles */
+.profile-sidebar {
+    width: 300px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.user-info {
+    text-align: center;
+}
+
+.profile-pic {
+    font-size: 80px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.user-info h2 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.user-info p {
+    color: #666;
+}
+
+.profile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-btn {
+    padding: 12px;
+    border: none;
+    background: #f8f9fa;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: left;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-btn.active {
+    background: #ffc107;
+    color: #000;
+}
+
+.logout-btn {
+    margin-top: auto;
+    padding: 12px;
+    border: none;
+    background: #dc3545;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background: #c82333;
+}
+
+/* Content Styles */
+.profile-content {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.content-section h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Rides List Styles */
+.rides-list, .history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ride-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.ride-card .ride-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.ride-card .ride-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ride-card .ride-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.ride-card .detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+}
+
+.ride-card .ride-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+/* Settings Form Styles */
+.settings-form {
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ffc107;
+    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.2);
+}
+
+.update-btn {
+    background: #ffc107;
+    color: #000;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.update-btn:hover {
+    background: #e0a800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .profile-sidebar {
+        width: 100%;
+    }
+}
+
+/* Inherit navbar and footer styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    height: 100px;
+}
+
+.logo img {
+    width: 150px;
+    margin-left: 20px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.book-btn {
+    background-color: #ffc107;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    background-color: #e0a800;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.nav-item img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+.nav-item.active, .nav-item:hover {
+    color: #000;
+}
+
+.container {
+    height: 50px;
+    background: #fff;
+    margin-top: 10px;
+    display: flex;
+    position: relative;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #666;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+} 

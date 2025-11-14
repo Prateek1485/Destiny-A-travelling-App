@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Search Rides - Destiny</title>
+    <link rel="stylesheet" href="/css/Search_style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo_text"><img src="/images/logo.png" alt="Destiny Logo" /></div>
+        </div>
+        <nav class="nav-links">
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+            <a href="#">BLOG</a>
+            <button class="book-btn">Book a Ride</button>
+        </nav>
+    </header>
+
+    <main class="search-container">
+        <div class="search-section">
+            <h2>Find Your Ride</h2>
+            <form id="searchForm" class="search-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="from">From</label>
+                        <input type="text" id="from" name="from" placeholder="Enter pickup location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="to">To</label>
+                        <input type="text" id="to" name="to" placeholder="Enter destination" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="seats">Seats</label>
+                        <input type="number" id="seats" name="seats" min="1" max="7" value="1" required>
+                    </div>
+                </div>
+                <button type="submit" class="search-btn">Search Rides</button>
+            </form>
+        </div>
+
+        <div class="filters-section">
+            <div class="filter-group">
+                <h3>Price Range</h3>
+                <div class="price-range">
+                    <input type="range" id="priceRange" min="0" max="1000" step="50" value="500">
+                    <div class="price-inputs">
+                        <input type="number" id="minPrice" placeholder="Min" value="0">
+                        <span>to</span>
+                        <input type="number" id="maxPrice" placeholder="Max" value="1000">
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Vehicle Type</h3>
+                <div class="vehicle-types">
+                    <label class="vehicle-option">
+                        <input type="checkbox" name="vehicleType" value="Sedan">
+                        <span>Sedan</span>
+                    </label>
+                    <label class="vehicle-option">
+                        <input type="checkbox" name="vehicleType" value="SUV">
+                        <span>SUV</span>
+                    </label>
+                    <label class="vehicle-option">
+                        <input type="checkbox" name="vehicleType" value="Hatchback">
+                        <span>Hatchback</span>
+                    </label>
+                    <label class="vehicle-option">
+                        <input type="checkbox" name="vehicleType" value="Electric">
+                        <span>Electric</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Sort By</h3>
+                <select id="sortBy" class="sort-select">
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="time-asc">Time: Earliest First</option>
+                    <option value="time-desc">Time: Latest First</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <div class="results-header">
+                <h2>Available Rides</h2>
+                <div class="results-count">Showing <span id="rideCount">0</span> rides</div>
+            </div>
+            <div id="ridesList" class="rides-list">
+                <!-- Rides will be added here dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <nav class="bottom-nav">
+            <a href="Home.html" class="nav-item">
+                <img src="https://img.icons8.com/ios-filled/50/taxi.png" alt="Home">
+                <span>Home</span>
+            </a>
+            <a href="Search.html" class="nav-item active">
+                <img src="https://img.icons8.com/ios-filled/50/search--v1.png" alt="Search">
+                <span>Search</span>
+            </a>
+            <a href="Share.html" class="nav-item">
+                <img src="https://img.icons8.com/ios-filled/50/add-user-group-man-man.png" alt="Share">
+                <span>Share</span>
+            </a>
+            <a href="Profile.html" class="nav-item">
+                <img src="https://img.icons8.com/ios-filled/50/user-male-circle.png" alt="Profile">
+                <span>Profile</span>
+            </a>
+        </nav>
+        <div class="container">
+            <p>&copy; 2025 Destiny. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/search.js"></script>
+</body>
+</html> 
